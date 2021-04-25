@@ -1,0 +1,461 @@
+harshith@ubuntu:~$ mongoimport --type csv -d employee -c details --headerline --drop /home/harshith/employee-salary-data-1.csv
+2021-04-19T18:14:05.725+0530	connected to: mongodb://localhost/
+2021-04-19T18:14:05.726+0530	dropping: employee.details
+2021-04-19T18:14:05.970+0530	9000 document(s) imported successfully. 0 document(s) failed to import.
+harshith@ubuntu:~$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("ba1670dd-d7eb-444c-96fa-323b9f71ffa5") }
+MongoDB server version: 4.4.5
+---
+The server generated these startup warnings when booting: 
+        2021-04-19T17:27:31.987+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2021-04-19T17:27:32.777+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin         0.000GB
+breastcancer  0.000GB
+config        0.000GB
+employee      0.001GB
+local         0.000GB
+> use employee
+switched to db employee
+> db.details.find().pretty()
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d395"),
+	"SalaryDataID" : 3,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Hightower, Timothy",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 53435.2,
+	"RegularRate" : 53817.28,
+	"OvertimeRate" : 2045.97,
+	"IncentiveAllowance" : 8013.04,
+	"Other" : 610,
+	"YearToDate" : 64486.29
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d396"),
+	"SalaryDataID" : 9,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Overall, Patrick",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 50502.4,
+	"RegularRate" : 50177.28,
+	"OvertimeRate" : 3735.5,
+	"IncentiveAllowance" : 7291.52,
+	"Other" : 0,
+	"YearToDate" : 61204.3
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d397"),
+	"SalaryDataID" : 10,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Fisher, Steven",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 46051.2,
+	"RegularRate" : 29558.96,
+	"OvertimeRate" : 587.37,
+	"IncentiveAllowance" : 3808.44,
+	"Other" : 3798.75,
+	"YearToDate" : 37753.52
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d398"),
+	"SalaryDataID" : 11,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Green, John",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 46051.2,
+	"RegularRate" : 46714.11,
+	"OvertimeRate" : 1485.93,
+	"IncentiveAllowance" : 7019.04,
+	"Other" : 2088,
+	"YearToDate" : 57307.08
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d399"),
+	"SalaryDataID" : 12,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Hageman, Roberta",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 49587.2,
+	"RegularRate" : 50279.76,
+	"OvertimeRate" : 737.56,
+	"IncentiveAllowance" : 5547.2,
+	"Other" : 238,
+	"YearToDate" : 56802.52
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d39a"),
+	"SalaryDataID" : 13,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Boleyjack, Jermeco",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 44428.8,
+	"RegularRate" : 32228.64,
+	"OvertimeRate" : 614.07,
+	"IncentiveAllowance" : 2910,
+	"Other" : 650,
+	"YearToDate" : 36402.71
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d39b"),
+	"SalaryDataID" : 14,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Frederick, Jennifer",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 45219.2,
+	"RegularRate" : 46086.43,
+	"OvertimeRate" : 1149.08,
+	"IncentiveAllowance" : 5580.8,
+	"Other" : 822,
+	"YearToDate" : 53638.31
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d39c"),
+	"SalaryDataID" : 15,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Wagner, Edward",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 45219.2,
+	"RegularRate" : 45528.02,
+	"OvertimeRate" : 931.65,
+	"IncentiveAllowance" : 6954.8,
+	"Other" : 4146,
+	"YearToDate" : 57560.47
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d39d"),
+	"SalaryDataID" : 16,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Hall, Amy",
+	"Department" : "Emergency Mgt Agency/MetroSafe",
+	"JobTitle" : "Info Processing Tech-EMA/MS   ",
+	"AnnualRate" : 32073.6,
+	"RegularRate" : 33302.16,
+	"OvertimeRate" : 2282.1,
+	"IncentiveAllowance" : 509.04,
+	"Other" : 511.74,
+	"YearToDate" : 36605.04
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d39e"),
+	"SalaryDataID" : 1,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Lampkin, Joseph",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 45219.2,
+	"RegularRate" : 45140.8,
+	"OvertimeRate" : 655.26,
+	"IncentiveAllowance" : 5546.64,
+	"Other" : 690,
+	"YearToDate" : 52032.7
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d39f"),
+	"SalaryDataID" : 17,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Alexander, Jeffrey",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 48672,
+	"RegularRate" : 49209.38,
+	"OvertimeRate" : 2825.91,
+	"IncentiveAllowance" : 6616.48,
+	"Other" : 4586,
+	"YearToDate" : 63237.77
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a0"),
+	"SalaryDataID" : 19,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Hirtzel, William",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 48672,
+	"RegularRate" : 48339.64,
+	"OvertimeRate" : 2357.91,
+	"IncentiveAllowance" : 7150.64,
+	"Other" : 50,
+	"YearToDate" : 57898.19
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a1"),
+	"SalaryDataID" : 18,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Irish, Jonathan",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 48672,
+	"RegularRate" : 48951.04,
+	"OvertimeRate" : 5842.33,
+	"IncentiveAllowance" : 7375.76,
+	"Other" : 2076,
+	"YearToDate" : 64245.13
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a2"),
+	"SalaryDataID" : 20,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Woodard, Michael",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 45219.2,
+	"RegularRate" : 44698.6,
+	"OvertimeRate" : 3005.12,
+	"IncentiveAllowance" : 5695.81,
+	"Other" : 2756,
+	"YearToDate" : 56155.53
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a3"),
+	"SalaryDataID" : 21,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Minor, Charles",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 49587.2,
+	"RegularRate" : 50001.95,
+	"OvertimeRate" : 157.75,
+	"IncentiveAllowance" : 7037.12,
+	"Other" : 460,
+	"YearToDate" : 57656.82
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a4"),
+	"SalaryDataID" : 23,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Sturgeon, Scott",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 47819.2,
+	"RegularRate" : 48313.36,
+	"OvertimeRate" : 941.72,
+	"IncentiveAllowance" : 7033.12,
+	"Other" : 0,
+	"YearToDate" : 56288.2
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a5"),
+	"SalaryDataID" : 24,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Rivera, Francisco",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 47819.2,
+	"RegularRate" : 48095.2,
+	"OvertimeRate" : 2619.86,
+	"IncentiveAllowance" : 5665.92,
+	"Other" : 568,
+	"YearToDate" : 56948.98
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a6"),
+	"SalaryDataID" : 25,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Gosney, Donald",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 47819.2,
+	"RegularRate" : 47343.14,
+	"OvertimeRate" : 984.8,
+	"IncentiveAllowance" : 7038.16,
+	"Other" : 1090,
+	"YearToDate" : 56456.1
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a7"),
+	"SalaryDataID" : 22,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Moorman, Gloria",
+	"Department" : "Neighborhoods",
+	"JobTitle" : "Youth Services Coordinator II ",
+	"AnnualRate" : 47403.2,
+	"RegularRate" : 46895.6,
+	"OvertimeRate" : 0,
+	"IncentiveAllowance" : 0,
+	"Other" : 0,
+	"YearToDate" : 46895.6
+}
+{
+	"_id" : ObjectId("607d7b15e4bd8c173660d3a8"),
+	"SalaryDataID" : 6,
+	"CalendarYear" : 2008,
+	"EmployeeName" : "Brandes, Eric",
+	"Department" : "Louisville Metro Police",
+	"JobTitle" : "Police Officer                ",
+	"AnnualRate" : 46924.8,
+	"RegularRate" : 47514.57,
+	"OvertimeRate" : 260.52,
+	"IncentiveAllowance" : 5519.2,
+	"Other" : 330,
+	"YearToDate" : 53624.29
+}
+
+
+> db.details.insert({SalaryDataID:"01",CalenderYear:"2008",Employeename:"harshith bn",Department:"Louisville Metro Police",JobTitle:"Police Officer",AnnualRate:"47403.2",RegularRate:"46895.6",OvertimeRate:"0",IncentiveAllowance:"0",Other:"0",YearToDate:"46895.6"})
+WriteResult({ "nInserted" : 1 })
+> db.details.find({SalaryDataID:"01"})
+{ "_id" : ObjectId("607d8058b23cb22700cf1055"), "SalaryDataID" : "01", "CalenderYear" : "2008", "Employeename" : "harshith bn", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer", "AnnualRate" : "47403.2", "RegularRate" : "46895.6", "OvertimeRate" : "0", "IncentiveAllowance" : "0", "Other" : "0", "YearToDate" : "46895.6" }
+
+> db.details.update({SalaryDataId:"01"},{$set:{SalaryDataID:"02"}})
+WriteResult({ "nMatched" :1 , "nUpserted" : 0, "nModified" : 1 })
+
+db.details.remove({JobTitle:"Info Processing Tech-EMA/MS   "})
+WriteResult({ "nRemoved" : 28})
+
+> db.details.find({"SalaryDataID":{$exists:true}})
+{ "_id" : ObjectId("607d7b15e4bd8c173660d395"), "SalaryDataID" : 3, "CalendarYear" : 2008, "EmployeeName" : "Hightower, Timothy", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 53435.2, "RegularRate" : 53817.28, "OvertimeRate" : 2045.97, "IncentiveAllowance" : 8013.04, "Other" : 610, "YearToDate" : 64486.29 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d396"), "SalaryDataID" : 9, "CalendarYear" : 2008, "EmployeeName" : "Overall, Patrick", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 50502.4, "RegularRate" : 50177.28, "OvertimeRate" : 3735.5, "IncentiveAllowance" : 7291.52, "Other" : 0, "YearToDate" : 61204.3 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d397"), "SalaryDataID" : 10, "CalendarYear" : 2008, "EmployeeName" : "Fisher, Steven", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46051.2, "RegularRate" : 29558.96, "OvertimeRate" : 587.37, "IncentiveAllowance" : 3808.44, "Other" : 3798.75, "YearToDate" : 37753.52 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d398"), "SalaryDataID" : 11, "CalendarYear" : 2008, "EmployeeName" : "Green, John", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46051.2, "RegularRate" : 46714.11, "OvertimeRate" : 1485.93, "IncentiveAllowance" : 7019.04, "Other" : 2088, "YearToDate" : 57307.08 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d399"), "SalaryDataID" : 12, "CalendarYear" : 2008, "EmployeeName" : "Hageman, Roberta", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 49587.2, "RegularRate" : 50279.76, "OvertimeRate" : 737.56, "IncentiveAllowance" : 5547.2, "Other" : 238, "YearToDate" : 56802.52 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39a"), "SalaryDataID" : 13, "CalendarYear" : 2008, "EmployeeName" : "Boleyjack, Jermeco", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 44428.8, "RegularRate" : 32228.64, "OvertimeRate" : 614.07, "IncentiveAllowance" : 2910, "Other" : 650, "YearToDate" : 36402.71 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39b"), "SalaryDataID" : 14, "CalendarYear" : 2008, "EmployeeName" : "Frederick, Jennifer", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 46086.43, "OvertimeRate" : 1149.08, "IncentiveAllowance" : 5580.8, "Other" : 822, "YearToDate" : 53638.31 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39c"), "SalaryDataID" : 15, "CalendarYear" : 2008, "EmployeeName" : "Wagner, Edward", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 45528.02, "OvertimeRate" : 931.65, "IncentiveAllowance" : 6954.8, "Other" : 4146, "YearToDate" : 57560.47 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39d"), "SalaryDataID" : 16, "CalendarYear" : 2008, "EmployeeName" : "Hall, Amy", "Department" : "Emergency Mgt Agency/MetroSafe", "JobTitle" : "Info Processing Tech-EMA/MS   ", "AnnualRate" : 32073.6, "RegularRate" : 33302.16, "OvertimeRate" : 2282.1, "IncentiveAllowance" : 509.04, "Other" : 511.74, "YearToDate" : 36605.04 }
+
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a7"), "SalaryDataID" : 22, "CalendarYear" : 2008, "EmployeeName" : "Moorman, Gloria", "Department" : "Neighborhoods", "JobTitle" : "Youth Services Coordinator II ", "AnnualRate" : 47403.2, "RegularRate" : 46895.6, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 46895.6 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a8"), "SalaryDataID" : 6, "CalendarYear" : 2008, "EmployeeName" : "Brandes, Eric", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46924.8, "RegularRate" : 47514.57, "OvertimeRate" : 260.52, "IncentiveAllowance" : 5519.2, "Other" : 330, "YearToDate" : 53624.29 }
+Type "it" for more
+> db.details.aggregate([{$group:{_id:"$Department"}}])
+{ "_id" : "Human Resources" }
+{ "_id" : "Finance" }
+{ "_id" : "Louisville Fire" }
+{ "_id" : "Parking Authority of River Cty" }
+{ "_id" : "Human Services" }
+{ "_id" : "Revenue Commission" }
+{ "_id" : "Coroner" }
+{ "_id" : "Waterfront Development Corp   " }
+{ "_id" : "Neighborhoods" }
+{ "_id" : "Develop Louisville            " }
+{ "_id" : "Public Health & Wellness" }
+{ "_id" : "Waterfront Development Corp" }
+{ "_id" : "County Attorney" }
+{ "_id" : "Economic Development" }
+{ "_id" : "Internal Auditor" }
+{ "_id" : "OMB - Billing Services        " }
+{ "_id" : "Solid Waste Management" }
+{ "_id" : "Public Works" }
+{ "_id" : "Belle of Louisville" }
+{ "_id" : "Mayor's Office" }
+Type "it" for more
+>db.details.find({"Department":{$regex:"P"}})
+{ "_id" : ObjectId("607d7b15e4bd8c173660d395"), "SalaryDataID" : 3, "CalendarYear" : 2008, "EmployeeName" : "Hightower, Timothy", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 53435.2, "RegularRate" : 53817.28, "OvertimeRate" : 2045.97, "IncentiveAllowance" : 8013.04, "Other" : 610, "YearToDate" : 64486.29 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d396"), "SalaryDataID" : 9, "CalendarYear" : 2008, "EmployeeName" : "Overall, Patrick", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 50502.4, "RegularRate" : 50177.28, "OvertimeRate" : 3735.5, "IncentiveAllowance" : 7291.52, "Other" : 0, "YearToDate" : 61204.3 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d397"), "SalaryDataID" : 10, "CalendarYear" : 2008, "EmployeeName" : "Fisher, Steven", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46051.2, "RegularRate" : 29558.96, "OvertimeRate" : 587.37, "IncentiveAllowance" : 3808.44, "Other" : 3798.75, "YearToDate" : 37753.52 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d398"), "SalaryDataID" : 11, "CalendarYear" : 2008, "EmployeeName" : "Green, John", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46051.2, "RegularRate" : 46714.11, "OvertimeRate" : 1485.93, "IncentiveAllowance" : 7019.04, "Other" : 2088, "YearToDate" : 57307.08 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d399"), "SalaryDataID" : 12, "CalendarYear" : 2008, "EmployeeName" : "Hageman, Roberta", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 49587.2, "RegularRate" : 50279.76, "OvertimeRate" : 737.56, "IncentiveAllowance" : 5547.2, "Other" : 238, "YearToDate" : 56802.52 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39a"), "SalaryDataID" : 13, "CalendarYear" : 2008, "EmployeeName" : "Boleyjack, Jermeco", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 44428.8, "RegularRate" : 32228.64, "OvertimeRate" : 614.07, "IncentiveAllowance" : 2910, "Other" : 650, "YearToDate" : 36402.71 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39b"), "SalaryDataID" : 14, "CalendarYear" : 2008, "EmployeeName" : "Frederick, Jennifer", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 46086.43, "OvertimeRate" : 1149.08, "IncentiveAllowance" : 5580.8, "Other" : 822, "YearToDate" : 53638.31 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39c"), "SalaryDataID" : 15, "CalendarYear" : 2008, "EmployeeName" : "Wagner, Edward", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 45528.02, "OvertimeRate" : 931.65, "IncentiveAllowance" : 6954.8, "Other" : 4146, "YearToDate" : 57560.47 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39e"), "SalaryDataID" : 1, "CalendarYear" : 2008, "EmployeeName" : "Lampkin, Joseph", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 45140.8, "OvertimeRate" : 655.26, "IncentiveAllowance" : 5546.64, "Other" : 690, "YearToDate" : 52032.7 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39f"), "SalaryDataID" : 17, "CalendarYear" : 2008, "EmployeeName" : "Alexander, Jeffrey", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 48672, "RegularRate" : 49209.38, "OvertimeRate" : 2825.91, "IncentiveAllowance" : 6616.48, "Other" : 4586, "YearToDate" : 63237.77 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a0"), "SalaryDataID" : 19, "CalendarYear" : 2008, "EmployeeName" : "Hirtzel, William", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 48672, "RegularRate" : 48339.64, "OvertimeRate" : 2357.91, "IncentiveAllowance" : 7150.64, "Other" : 50, "YearToDate" : 57898.19 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a1"), "SalaryDataID" : 18, "CalendarYear" : 2008, "EmployeeName" : "Irish, Jonathan", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 48672, "RegularRate" : 48951.04, "OvertimeRate" : 5842.33, "IncentiveAllowance" : 7375.76, "Other" : 2076, "YearToDate" : 64245.13 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a2"), "SalaryDataID" : 20, "CalendarYear" : 2008, "EmployeeName" : "Woodard, Michael", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 44698.6, "OvertimeRate" : 3005.12, "IncentiveAllowance" : 5695.81, "Other" : 2756, "YearToDate" : 56155.53 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a3"), "SalaryDataID" : 21, "CalendarYear" : 2008, "EmployeeName" : "Minor, Charles", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 49587.2, "RegularRate" : 50001.95, "OvertimeRate" : 157.75, "IncentiveAllowance" : 7037.12, "Other" : 460, "YearToDate" : 57656.82 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a4"), "SalaryDataID" : 23, "CalendarYear" : 2008, "EmployeeName" : "Sturgeon, Scott", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 47819.2, "RegularRate" : 48313.36, "OvertimeRate" : 941.72, "IncentiveAllowance" : 7033.12, "Other" : 0, "YearToDate" : 56288.2 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a5"), "SalaryDataID" : 24, "CalendarYear" : 2008, "EmployeeName" : "Rivera, Francisco", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 47819.2, "RegularRate" : 48095.2, "OvertimeRate" : 2619.86, "IncentiveAllowance" : 5665.92, "Other" : 568, "YearToDate" : 56948.98 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a6"), "SalaryDataID" : 25, "CalendarYear" : 2008, "EmployeeName" : "Gosney, Donald", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 47819.2, "RegularRate" : 47343.14, "OvertimeRate" : 984.8, "IncentiveAllowance" : 7038.16, "Other" : 1090, "YearToDate" : 56456.1 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a8"), "SalaryDataID" : 6, "CalendarYear" : 2008, "EmployeeName" : "Brandes, Eric", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46924.8, "RegularRate" : 47514.57, "OvertimeRate" : 260.52, "IncentiveAllowance" : 5519.2, "Other" : 330, "YearToDate" : 53624.29 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a9"), "SalaryDataID" : 2, "CalendarYear" : 2008, "EmployeeName" : "Brink, Robin", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 49504, "RegularRate" : 24060.21, "OvertimeRate" : 559, "IncentiveAllowance" : 4132.48, "Other" : 7001.68, "YearToDate" : 35753.37 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3aa"), "SalaryDataID" : 7, "CalendarYear" : 2008, "EmployeeName" : "Miller, Malcolm", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46051.2, "RegularRate" : 44643.9, "OvertimeRate" : 1296.77, "IncentiveAllowance" : 6885.76, "Other" : 1832, "YearToDate" : 54658.43 }
+Type "it" for more
+>db.details.find({"Department":{$type:2}})
+{ "_id" : ObjectId("607d7b15e4bd8c173660d395"), "SalaryDataID" : 3, "CalendarYear" : 2008, "EmployeeName" : "Hightower, Timothy", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 53435.2, "RegularRate" : 53817.28, "OvertimeRate" : 2045.97, "IncentiveAllowance" : 8013.04, "Other" : 610, "YearToDate" : 64486.29 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d396"), "SalaryDataID" : 9, "CalendarYear" : 2008, "EmployeeName" : "Overall, Patrick", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 50502.4, "RegularRate" : 50177.28, "OvertimeRate" : 3735.5, "IncentiveAllowance" : 7291.52, "Other" : 0, "YearToDate" : 61204.3 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d397"), "SalaryDataID" : 10, "CalendarYear" : 2008, "EmployeeName" : "Fisher, Steven", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46051.2, "RegularRate" : 29558.96, "OvertimeRate" : 587.37, "IncentiveAllowance" : 3808.44, "Other" : 3798.75, "YearToDate" : 37753.52 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d398"), "SalaryDataID" : 11, "CalendarYear" : 2008, "EmployeeName" : "Green, John", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46051.2, "RegularRate" : 46714.11, "OvertimeRate" : 1485.93, "IncentiveAllowance" : 7019.04, "Other" : 2088, "YearToDate" : 57307.08 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d399"), "SalaryDataID" : 12, "CalendarYear" : 2008, "EmployeeName" : "Hageman, Roberta", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 49587.2, "RegularRate" : 50279.76, "OvertimeRate" : 737.56, "IncentiveAllowance" : 5547.2, "Other" : 238, "YearToDate" : 56802.52 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39a"), "SalaryDataID" : 13, "CalendarYear" : 2008, "EmployeeName" : "Boleyjack, Jermeco", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 44428.8, "RegularRate" : 32228.64, "OvertimeRate" : 614.07, "IncentiveAllowance" : 2910, "Other" : 650, "YearToDate" : 36402.71 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39b"), "SalaryDataID" : 14, "CalendarYear" : 2008, "EmployeeName" : "Frederick, Jennifer", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 46086.43, "OvertimeRate" : 1149.08, "IncentiveAllowance" : 5580.8, "Other" : 822, "YearToDate" : 53638.31 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39c"), "SalaryDataID" : 15, "CalendarYear" : 2008, "EmployeeName" : "Wagner, Edward", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 45528.02, "OvertimeRate" : 931.65, "IncentiveAllowance" : 6954.8, "Other" : 4146, "YearToDate" : 57560.47 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39d"), "SalaryDataID" : 16, "CalendarYear" : 2008, "EmployeeName" : "Hall, Amy", "Department" : "Emergency Mgt Agency/MetroSafe", "JobTitle" : "Info Processing Tech-EMA/MS   ", "AnnualRate" : 32073.6, "RegularRate" : 33302.16, "OvertimeRate" : 2282.1, "IncentiveAllowance" : 509.04, "Other" : 511.74, "YearToDate" : 36605.04 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39e"), "SalaryDataID" : 1, "CalendarYear" : 2008, "EmployeeName" : "Lampkin, Joseph", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 45140.8, "OvertimeRate" : 655.26, "IncentiveAllowance" : 5546.64, "Other" : 690, "YearToDate" : 52032.7 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d39f"), "SalaryDataID" : 17, "CalendarYear" : 2008, "EmployeeName" : "Alexander, Jeffrey", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 48672, "RegularRate" : 49209.38, "OvertimeRate" : 2825.91, "IncentiveAllowance" : 6616.48, "Other" : 4586, "YearToDate" : 63237.77 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a0"), "SalaryDataID" : 19, "CalendarYear" : 2008, "EmployeeName" : "Hirtzel, William", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 48672, "RegularRate" : 48339.64, "OvertimeRate" : 2357.91, "IncentiveAllowance" : 7150.64, "Other" : 50, "YearToDate" : 57898.19 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a1"), "SalaryDataID" : 18, "CalendarYear" : 2008, "EmployeeName" : "Irish, Jonathan", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 48672, "RegularRate" : 48951.04, "OvertimeRate" : 5842.33, "IncentiveAllowance" : 7375.76, "Other" : 2076, "YearToDate" : 64245.13 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a2"), "SalaryDataID" : 20, "CalendarYear" : 2008, "EmployeeName" : "Woodard, Michael", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 45219.2, "RegularRate" : 44698.6, "OvertimeRate" : 3005.12, "IncentiveAllowance" : 5695.81, "Other" : 2756, "YearToDate" : 56155.53 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a3"), "SalaryDataID" : 21, "CalendarYear" : 2008, "EmployeeName" : "Minor, Charles", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 49587.2, "RegularRate" : 50001.95, "OvertimeRate" : 157.75, "IncentiveAllowance" : 7037.12, "Other" : 460, "YearToDate" : 57656.82 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a4"), "SalaryDataID" : 23, "CalendarYear" : 2008, "EmployeeName" : "Sturgeon, Scott", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 47819.2, "RegularRate" : 48313.36, "OvertimeRate" : 941.72, "IncentiveAllowance" : 7033.12, "Other" : 0, "YearToDate" : 56288.2 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a5"), "SalaryDataID" : 24, "CalendarYear" : 2008, "EmployeeName" : "Rivera, Francisco", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 47819.2, "RegularRate" : 48095.2, "OvertimeRate" : 2619.86, "IncentiveAllowance" : 5665.92, "Other" : 568, "YearToDate" : 56948.98 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a6"), "SalaryDataID" : 25, "CalendarYear" : 2008, "EmployeeName" : "Gosney, Donald", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 47819.2, "RegularRate" : 47343.14, "OvertimeRate" : 984.8, "IncentiveAllowance" : 7038.16, "Other" : 1090, "YearToDate" : 56456.1 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a7"), "SalaryDataID" : 22, "CalendarYear" : 2008, "EmployeeName" : "Moorman, Gloria", "Department" : "Neighborhoods", "JobTitle" : "Youth Services Coordinator II ", "AnnualRate" : 47403.2, "RegularRate" : 46895.6, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 46895.6 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660d3a8"), "SalaryDataID" : 6, "CalendarYear" : 2008, "EmployeeName" : "Brandes, Eric", "Department" : "Louisville Metro Police", "JobTitle" : "Police Officer                ", "AnnualRate" : 46924.8, "RegularRate" : 47514.57, "OvertimeRate" : 260.52, "IncentiveAllowance" : 5519.2, "Other" : 330, "YearToDate" : 53624.29 }
+Type "it" for more
+
+> db.details.aggregate([{$match:{Department:"Human Resources"}}])
+{ "_id" : ObjectId("607d7b15e4bd8c173660db05"), "SalaryDataID" : 1911, "CalendarYear" : 2008, "EmployeeName" : "Swinney, Melinda", "Department" : "Human Resources", "JobTitle" : "Employee Benefits Specialist  ", "AnnualRate" : 45531.2, "RegularRate" : 45046.19, "OvertimeRate" : 1271.46, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 46317.65 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660db26"), "SalaryDataID" : 1935, "CalendarYear" : 2009, "EmployeeName" : "Swinney, Melinda", "Department" : "Human Resources", "JobTitle" : "Employee Benefits Specialist  ", "AnnualRate" : 45531.2, "RegularRate" : 46581.93, "OvertimeRate" : 65.67, "IncentiveAllowance" : 0, "Other" : 1576.08, "YearToDate" : 48223.68 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660e354"), "SalaryDataID" : 4032, "CalendarYear" : 2009, "EmployeeName" : "Logsdon, Rhonda", "Department" : "Human Resources", "JobTitle" : "Employee Benefits Specialist  ", "AnnualRate" : 37689.6, "RegularRate" : 38559.36, "OvertimeRate" : 40.77, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 38600.13 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660eb61"), "SalaryDataID" : 6098, "CalendarYear" : 2008, "EmployeeName" : "Ward, Esther", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 35547.2, "RegularRate" : 4785.2, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 4785.2 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660eb6c"), "SalaryDataID" : 6104, "CalendarYear" : 2009, "EmployeeName" : "Ward, Esther", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 35547.2, "RegularRate" : 18730.65, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 528.08, "YearToDate" : 19258.73 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660ed7d"), "SalaryDataID" : 6633, "CalendarYear" : 2008, "EmployeeName" : "Wilson, Carla", "Department" : "Human Resources", "JobTitle" : "Administrative Specialist     ", "AnnualRate" : 28288, "RegularRate" : 3752.24, "OvertimeRate" : 20.4, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 3772.64 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660ed85"), "SalaryDataID" : 6648, "CalendarYear" : 2010, "EmployeeName" : "Doemer, Cynthia", "Department" : "Human Resources", "JobTitle" : "Administrative Specialist     ", "AnnualRate" : 29432, "RegularRate" : 29134.18, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 29134.18 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660ed8e"), "SalaryDataID" : 6657, "CalendarYear" : 2009, "EmployeeName" : "Doemer, Cynthia", "Department" : "Human Resources", "JobTitle" : "Administrative Specialist     ", "AnnualRate" : 28849.6, "RegularRate" : 29515.38, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 29515.38 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660ed9c"), "SalaryDataID" : 6665, "CalendarYear" : 2011, "EmployeeName" : "Doemer, Cynthia", "Department" : "Human Resources", "JobTitle" : "Administrative Specialist     ", "AnnualRate" : 29432, "RegularRate" : 29432.14, "OvertimeRate" : 31.84, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 29463.98 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660edaa"), "SalaryDataID" : 6674, "CalendarYear" : 2012, "EmployeeName" : "Doemer, Cynthia", "Department" : "Human Resources", "JobTitle" : "Administrative Specialist     ", "AnnualRate" : 30014.4, "RegularRate" : 27406.12, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 27406.12 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660ee72"), "SalaryDataID" : 6878, "CalendarYear" : 2019, "EmployeeName" : "Johnson, Casey", "Department" : "Human Resources", "JobTitle" : "Employee Benefits Specialist  ", "AnnualRate" : 41142.4, "RegularRate" : 18988.8, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 18988.8 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f061"), "SalaryDataID" : 7380, "CalendarYear" : 2011, "EmployeeName" : "Bibbs James, Jackie", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 38708.8, "RegularRate" : 38411.09, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 38411.09 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f0ab"), "SalaryDataID" : 7448, "CalendarYear" : 2008, "EmployeeName" : "Maupin, Jennifer", "Department" : "Human Resources", "JobTitle" : "Legal Administrative Liaison  ", "AnnualRate" : 49982.4, "RegularRate" : 49452.26, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 49452.26 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f0b5"), "SalaryDataID" : 7457, "CalendarYear" : 2010, "EmployeeName" : "Maupin, Jennifer", "Department" : "Human Resources", "JobTitle" : "Legal Administrative Liaison  ", "AnnualRate" : 50980.8, "RegularRate" : 50469.03, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 50469.03 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f0bb"), "SalaryDataID" : 7464, "CalendarYear" : 2009, "EmployeeName" : "Maupin, Jennifer", "Department" : "Human Resources", "JobTitle" : "Legal Administrative Liaison  ", "AnnualRate" : 49982.4, "RegularRate" : 51135.87, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 51135.87 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f266"), "SalaryDataID" : 7897, "CalendarYear" : 2008, "EmployeeName" : "Aiken, Julia", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 39603.2, "RegularRate" : 39185.87, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 39185.87 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f26e"), "SalaryDataID" : 7905, "CalendarYear" : 2010, "EmployeeName" : "Aiken, Julia", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 40393.6, "RegularRate" : 39895.6, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 39895.6 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f275"), "SalaryDataID" : 7912, "CalendarYear" : 2009, "EmployeeName" : "Aiken, Julia", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 39603.2, "RegularRate" : 40218.19, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 40218.19 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f28a"), "SalaryDataID" : 7926, "CalendarYear" : 2013, "EmployeeName" : "Aiken, Julia", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 42036.8, "RegularRate" : 41604.85, "OvertimeRate" : 74.29, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 41679.14 }
+{ "_id" : ObjectId("607d7b15e4bd8c173660f2d2"), "SalaryDataID" : 7998, "CalendarYear" : 2008, "EmployeeName" : "Montgomery, Natasha", "Department" : "Human Resources", "JobTitle" : "Human Res Hiring Coord        ", "AnnualRate" : 36732.8, "RegularRate" : 36338.04, "OvertimeRate" : 0, "IncentiveAllowance" : 0, "Other" : 0, "YearToDate" : 36338.04 }
+Type "it" for more
+>db.details.aggregate([{$group:{_id:"SalaryDataID",value:{$sum:"AnnualRate"}}},{$out:"agg_output"}])
+> show collections
+agg_output
+details
+
+db.test.mapReduce(function(){emit(this.Department,this.AnnualRate);},function(key,values){return Array.sum(values)},{query:{JobTitle:"Police Officer                "},out:"mapoutput"})
+
+{
+
+	"result" : "mapoutput",
+
+	"timeMillis" : 590,
+
+	"counts" : {
+
+		"input" : 255,
+
+		"emit" : 255,
+
+		"reduce" : 38,
+
+		"output" : 44
+
+	},
+
+	"ok" : 1
+
+mongoexport --db employee --collection details --out /home/harshith/employee-salary-data-1.csv
+2021-04-25T12:53:55.415+0530	connected to: mongodb://localhost/
+2021-04-25T12:53:55.704+0530	exported 9000 records
+
